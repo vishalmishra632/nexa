@@ -1,0 +1,233 @@
+.main-banner-three {
+	background-color: #f5faff;
+	position: relative;
+	z-index: 1;
+	.main-banner-content {
+		width: 100%;
+		height: 100%;
+		.content {
+			max-width: 630px;
+			margin-left: auto;
+			margin-top: 90px;
+			h1 {
+                font-size: 55px;
+                margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 35px;
+			}
+			.default-btn {
+				margin-top: 20px;
+            }
+            .slider-btn-wrap {
+                .box-btn.border-btn {
+                    border: 1px solid var(--mainColor);
+                    color: var(--mainColor);
+                    margin-left: 20px;
+                    &:hover {
+                        color: var(--whiteColor);
+                        border-color: var(--headingColor);
+                    }
+                }
+            }
+		}
+	}
+	.banner-image-slider {
+		.banner-image {
+			height: 100vh;
+			background-position: center center;
+			background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+		}
+	}
+}
+::ng-deep {
+    .main-banner-three {
+        .banner-image-slider {
+            .owl-nav {
+                margin-top: 0;
+            }
+            .owl-dots {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                .owl-dot {
+                    span {
+                        width: 20px;
+                        height: 10px;
+                        transition: var(--transition);
+                    }
+                    &.active {
+                        span {
+                            background-color: var(--mainColor);
+                            width: 25px;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            background-color: var(--mainColor);
+                        }
+                    }
+                }
+            }
+            .owl-prev {
+                background-color: var(--mainColor) !important;
+                position: absolute;
+                bottom: 50%;
+                left: 0;
+                padding: 0 !important;
+                transition: var(--transition);
+                transform: translateY(35px);
+                opacity: 0;
+                i {
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    color: var(--whiteColor);
+                    display: inline-block;
+                }
+                &:hover {
+                    background-color: var(--darkBlueColor);
+                    i {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+            .owl-next {
+                background-color: var(--mainColor) !important;
+                position: absolute;
+                bottom: 50%;
+                right: 0;
+                padding: 0 !important;
+                transition: var(--transition);
+                transform: translateY(35px);
+                opacity: 0;
+                i {
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    color: var(--whiteColor);
+                    display: inline-block;
+                }
+                &:hover {
+                    background-color: var(--darkBlueColor) !important;
+                    i {
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+            &:hover {
+                .owl-prev {
+                    opacity: 1;
+                }
+                .owl-next {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .main-banner-three {
+        .banner-image-slider {
+            .banner-image {
+                height: 400px;
+            }
+        }
+        .container-fluid {
+            max-width: 540px;
+            .col-lg-6.pr-0 {
+                padding-right: 15px !important;
+            }
+        }
+        .main-banner-content {
+            text-align: center;
+            .content {
+                max-width: unset;
+                margin-top: 110px;
+                margin-bottom: 50px;
+                h1 {
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .main-banner-three {
+        .banner-image-slider {
+            .banner-image {
+                height: 500px;
+            }
+        }
+        .container-fluid {
+            max-width: 720px;
+            .col-lg-6.pr-0 {
+                padding-right: 15px !important;
+            }
+        }
+        .main-banner-content {
+            text-align: center;
+            .content {
+                max-width: unset;
+                margin-top: 130px;
+                margin-bottom: 60px;
+                h1 {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .main-banner-three {
+        .main-banner-content {
+            .content {
+                max-width: 450px;
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .main-banner-three {
+        .main-banner-content {
+            .content {
+                max-width: 640px;
+                padding-right: 45px;
+            }
+        }
+    }
+
+}

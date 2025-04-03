@@ -1,0 +1,76 @@
+.testimonials-area {
+    .single-testimonials {
+        box-shadow: var(--boxShadow);
+        padding: 20px 20px;
+        position: relative;
+        text-align: left;
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: var(--transition);
+        .testimonials-head {
+            .testimonials-img {
+                border: 1px solid var(--mainColor);
+                padding: 6px;
+                overflow: hidden;
+            }
+            .content {
+                margin-top: 0;
+                position: relative;
+                top: 2px;
+                h2 {
+                    color: #181818;
+                    font-family: "Poppins", sans-serif;
+                    position: relative;
+                    font-size: 21px;
+                    margin-bottom: 3px;
+                }
+                .rate {
+                    padding: 0;
+                    margin: 0;
+                    margin-top: 5px;
+                    li {
+                        display: inline-block;
+                        i {
+                            font-size: 15px;
+                            color: #ffc107;
+                        }
+                    }
+                }
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+        .testimonials-foot {
+            p {
+                margin-bottom: 0;
+                color: #616161;
+            }
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+        hr {
+            margin-top: 18px !important;
+            margin-bottom: 8px !important;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,136 @@
+.home-contact-area {
+    .contact-img {
+        animation: updown 5s infinite linear;
+    }
+    .content {
+        box-shadow: var(--boxShadow);
+        background-color: var(--whiteColor);
+        border-radius: var(--borderRadius);
+        padding: 30px;
+        input.form-control {
+            height: 55px;
+            border: 1px solid #eeeeee;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            background-color: #f9f9f9;
+            &:focus {
+                box-shadow: none;
+                border-color: var(--mainColor);
+            }
+        }
+        textarea.form-control {
+            width: 100%;
+            border: 1px solid #eeeeee;
+            max-height: 170px;
+            min-height: 170px;
+            box-shadow: none;
+            padding-left: 25px;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            &:focus {
+                box-shadow: none;
+                border-color: var(--mainColor);
+            }
+        }
+        button {
+            border: none;
+            padding: 15px 35px;
+            display: table;
+            text-align: center;
+            margin: 0 auto -8px;
+        }
+    }
+}
+.home-2-contact {
+    .content {
+        box-shadow: var(--boxShadow);
+        padding: 30px;
+        border-radius: var(--borderRadius);
+        input.form-control {
+            border-radius: var(--borderRadius);
+        }
+        textarea.form-control {
+            border-radius: 4px;
+        }
+    }
+    .contact-img {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        animation: none;
+        img {
+            display: none;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .home-contact-area {
+        .contact-img{
+            margin-bottom: 30px;
+            animation: none;
+        }
+    }
+    .home-contact-area {
+        .content{
+            padding: 20px;
+        }
+    }
+    .home-2-contact {
+        .contact-img {
+            height: 300px;
+            &.contact-img-2 {
+                margin-top: 30px;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .home-contact-area {
+        .contact-img{
+            margin-bottom: 30px;
+            animation: none;
+        }
+    }
+    .home-contact-area {
+        .content{
+            padding: 20px;
+        }
+    }
+    .home-2-contact {
+        .contact-img {
+            height: 300px;
+            &.contact-img-2 {
+                margin-top: 30px;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    .home-2-contact .contact-img {
+        height: 100%;
+        margin-top: 0 !important;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

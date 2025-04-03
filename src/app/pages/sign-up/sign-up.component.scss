@@ -1,0 +1,99 @@
+.signup-area {
+    .signup-form {
+        box-shadow: 0 0 40px rgba(82, 85, 90, 0.1);
+        padding: 40px;
+        max-width: 540px;
+        background: var(--whiteColor);
+        border-radius: 10px;
+        margin: auto;
+        .form-control {
+            border-radius: 4px;
+            height: 50px;
+            padding: 10px 20px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .box-btn {
+            margin-bottom: 30px;
+            i {
+                position: relative;
+                top: 1px;
+            }
+        }
+        .google {
+            padding: 15px 25px;
+            background: #dd4b39;
+            border-color: #dd4b39;
+        }
+        .facebook {
+            padding: 15px 17px;
+            background: #3b5999;
+            border-color: #3b5999;
+        }
+        .twitter {
+            padding: 15px 25px;
+            background: #55acee;
+            border-color: #55acee;
+        }
+        .signup-btn {
+            padding: 15px 50px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+    }
+    .privecy-txt {
+        font-size: 14px;
+
+        label {
+            position: relative;
+            top: -2px;
+            margin-left: 5px;
+        }
+    }
+    p.al-acc {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .section-tittle {
+        margin-bottom: 30px;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .signup-area .signup-form .box-btn {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .signup-area .signup-form {
+        padding: 20px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .signup-area .signup-form {
+        padding: 20px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,88 @@
+.team-area {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+    .single-team {
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--boxShadow);
+        margin-bottom: 30px;
+        transition: var(--transition);
+
+        .team-img {
+            height: 400px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            transition: 0.3s;
+            background: #121e4c;
+            img {
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+        }
+        .team-content {
+            padding: 25px 20px;
+            h3 {
+                color: #121e4c;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            p {
+                text-align: center;
+                color: #181818;
+                margin-bottom: 15px;
+            }
+            .social {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                transition: 0.3s;
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        background: #121e4c;
+                        border-radius: 50%;
+                        line-height: 32px;
+                        text-align: center;
+                        transition: 0.3s;
+                        color: #f5faff;
+                        transition: 0.3s;
+                        i {
+                            font-size: 15px;
+                        }
+                        &:hover {
+                            transform: translateY(-3px);
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

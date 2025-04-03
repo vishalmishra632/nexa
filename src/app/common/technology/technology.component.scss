@@ -1,0 +1,114 @@
+.technology-area {
+    .technology-content {
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .box-btn {
+            margin-top: 10px;
+        }
+    }
+    .choose-img {
+        position: relative;
+        .technology-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    }
+}
+.video-btn {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	border-radius: 50%;
+	color: var(--mainColor);
+	position: relative;
+	top: 3px;
+	z-index: 1;
+	background-color: var(--mainColor);
+	i {
+		font-size: 40px;
+		font-weight: 700;
+		color: var(--whiteColor);
+		position: absolute;
+		top: 0;
+		left: 3px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	&::after, &::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		bottom: 0;
+		left: 0;
+		border-radius: 50%;
+		background-color: var(--mainColor);
+	}
+	&::before {
+		animation: ripple 1.6s ease-out infinite;
+	}
+	&::after {
+		animation: ripple 1.6s ease-out infinite;
+	}
+	&:hover {
+		background-color: var(--mainColor);
+		i {
+			color: var(--whiteColor);
+		}
+	}
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .technology-area {
+        .technology-content {
+            h2 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .technology-area {
+        .technology-content {
+            h2 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

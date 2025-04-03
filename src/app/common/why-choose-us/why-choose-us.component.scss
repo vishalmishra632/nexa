@@ -1,0 +1,174 @@
+.choose-area {
+    .choose-content {
+        .faq-accordion {
+            .faq-item {
+                position: relative;
+                margin-bottom: 20px;
+                box-shadow: var(--boxShadow);
+
+                .faq-header {
+                    background-color: var(--whiteColor);
+                    box-shadow: var(--boxShadow);
+                    padding: 20px 60px 20px 25px;
+                    color: var(--darkBlueColor);
+                    position: relative;
+                    border-radius: 2px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    display: block;
+                    cursor: pointer;
+
+                    i {
+                        top: 50%;
+                        right: 20px;
+                        content: "\eb89";
+                        position: absolute;
+                        transform: translateY(-50%);
+                    }
+                }
+                .faq-content {
+                    background-color: var(--whiteColor);
+                    padding: 15px 30px 15px 30px;
+                    font-size: 16px;
+
+                    p {
+                        color: var(--darkBlueColor);
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.home2-choose-area {
+    .single-choose {
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: var(--boxShadow);
+        margin-bottom: 30px;
+        .icon {
+            background: var(--whiteColor);
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+            margin: auto;
+            box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.07);
+            padding: 10px 20px;
+            i {
+                font-size: 80px;
+                color: var(--darkBlueColor);
+                transition: 0.3s;
+            }
+        }
+        h3 {
+            text-align: center;
+            color: var(--headingColor);
+            margin-bottom: 0;
+            padding: 10px 5px;
+            font-size: 17px;
+            background-color: #f1f1f1;
+        }
+        &:hover {
+            transform: translateY(-10px);
+            .icon {
+                i {
+                    color: var(--mainColor);
+                }
+            }
+        }
+    }
+    .choose-c {
+        position: relative;
+        margin-top: 75px;
+        .content {
+            max-width: 600px;
+            margin-left: 30px;
+            h3 {
+                font-size: 30px;
+                color: var(--headingColor);
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+            p {
+                color: var(--headingColor);
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .box-btn {
+                border-radius: 50px;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .choose-img {
+        margin-bottom: 30px;
+    }
+    .choose-area {
+        .choose-content {
+            .faq-accordion {
+                .faq-item {
+                    .faq-header {
+                        font-size: 15px;
+                    }
+                    .faq-content {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .home2-choose-area {
+        .single-choose {
+            h3{
+                font-size: 19px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .choose-img {
+        margin-bottom: 30px;
+    }
+    .choose-area {
+        .choose-content {
+            .faq-accordion {
+                .faq-item {
+                    .faq-header {
+                        font-size: 15px;
+                    }
+                    .faq-content {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

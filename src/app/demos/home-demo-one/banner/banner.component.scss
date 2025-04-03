@@ -1,0 +1,186 @@
+.banner-area {
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    .banner-content {
+        max-width: 635px;
+        margin-left: auto;
+        margin-top: 30px;
+        h1 {
+            font-size: 55px;
+            color: var(--whiteColor);
+            margin: 0 0 30px;
+        }
+        p {
+            color: var(--whiteColor);
+            padding-right: 0%;
+        }
+        .banner-btn {
+            margin-top: 45px;
+            .box-btn {
+                margin-right: 20px;
+                &::before,
+                &::after {
+                    background: var(--whiteColor);
+                }
+                &:hover {
+                    color: #132460;
+                }
+            }
+        }
+    }
+    .banner-img {
+        animation: pulse 7s infinite;
+    }
+    .home-shape {
+        .shape1 {
+            position: absolute;
+            top: 55%;
+            left: 2%;
+            animation: animationFramesOne 15s linear infinite;
+        }
+        .shape2 {
+            position: absolute;
+            top: 19%;
+            left: 3%;
+            animation: pulse 4s infinite;
+        }
+        .shape3 {
+            position: absolute;
+            bottom: 13%;
+            left: 40%;
+            animation: rotaed360 6s infinite linear;
+        }
+        .shape4 {
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            animation: rotaed360 6s infinite linear;
+        }
+        .shape5 {
+            position: absolute;
+            top: 15%;
+            left: 62%;
+            animation: animationFramesOne 15s linear infinite;
+        }
+        .shape6 {
+            position: absolute;
+            bottom: 30%;
+            right: 4%;
+            animation: animationFramesOne 15s linear infinite;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .banner-area {
+        .container-fluid {
+            max-width: 540px;
+        }
+        .banner-content {
+            margin-top: 0;
+            text-align: center;
+            max-width: unset;
+            h1 {
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .banner-btn {
+                margin-top: 25px;
+                .box-btn {
+                    margin-right: 0;
+                    margin: 0 8px;
+                }
+            }
+        }
+        .banner-img {
+            margin-top: 30px;
+        }
+    }
+    .banner-area{
+        padding-top: 80px;
+        padding-bottom: 50px;
+        height: 100%;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .banner-area {
+        .container-fluid {
+            max-width: 720px;
+        }
+        .banner-content {
+            margin-top: 0;
+            text-align: center;
+            max-width: unset;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .banner-btn {
+                margin-top: 25px;
+                .box-btn {
+                    margin-right: 0;
+                    margin: 0 8px;
+                }
+            }
+        }
+        .banner-img {
+            margin-top: 30px;
+        }
+    }
+    .banner-area{
+        padding-top: 130px;
+        padding-bottom: 70px;
+        height: 100%;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .banner-area {
+        .banner-content {
+            max-width: 450px;
+            h1 {
+                font-size: 48px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .banner-area {
+        height: 100vh;
+        .home-shape {
+            .shape2 {
+                top: 18%;
+                left: 16%;
+            }
+        }
+    }
+
+}

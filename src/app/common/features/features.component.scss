@@ -1,0 +1,120 @@
+.feature-area {
+    .feature-tittle {
+        margin-bottom: 20px;
+        span {
+            color: var(--mainColor);
+            display: inline-block;
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+    }
+    .contnet {
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                position: relative;
+                padding-left: 30px;
+                color: var(--darkBlueColor);
+                font-size: 18px;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                i {
+                    position: absolute;
+                    display: inline-block;
+                    left: 0;
+                    top: 0;
+                    color: var(--mainColor);
+                    font-size: 18px;
+                }
+            }
+        }
+        .box-btn {
+            margin-top: 30px;
+        }
+    }
+    .feature-img {
+        animation: updown 5s infinite linear;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .feature-area {
+        .feature-tittle {
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+    .feature-area {
+        .feature-img {
+            -webkit-animation: none;
+            animation: none;
+            margin-top: 30px;
+        }
+        .contnet ul li {
+            font-size: 16px;
+            i {
+                top: -2px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .feature-area {
+        .feature-tittle {
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+    .feature-area {
+        .feature-img {
+            -webkit-animation: none;
+            animation: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contnet ul li {
+            font-size: 16px;
+            i {
+                top: -2px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .feature-area {
+        .feature-tittle {
+            h2 {
+                font-size: 35px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}
