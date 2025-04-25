@@ -1,34 +1,76 @@
+.home-service-area {
+    .row {
+        // Ensure equal height columns using flexbox
+        display: flex;
+        flex-wrap: wrap;
+        // Make all columns in a row have equal height
+        > [class*='col-'] {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    }
+}
+
 .single-service {
     position: relative;
     text-align: center;
     padding: 30px;
-    margin-bottom: 30px;
     transition: var(--transition);
     border-radius: var(--borderRadius);
     z-index: 1;
     overflow: hidden;
     box-shadow: var(--boxShadow);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // Set a minimum height to ensure consistency
+    min-height: 320px;
+
     .service-img {
         margin-bottom: 20px;
+
         img {
             width: 60px;
         }
     }
+
     .service-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         h3 {
             color: var(--darkBlueColor);
             transition: var(--transition);
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            min-height: 60px; // Ensure consistent height for titles
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             a {
                 color: var(--darkBlueColor);
             }
         }
+
         p {
-            margin-bottom: 12px;
+            flex: 1;
+            margin-bottom: 20px;
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .line-bnt {
+            margin-top: auto;
+            align-self: center;
         }
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -40,6 +82,7 @@
         z-index: -1;
         transition: all 0.5s;
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -51,8 +94,10 @@
         z-index: -1;
         transition: all 0.5s;
     }
+
     &:hover {
         transform: translateY(-10px);
+
         .service-content {
             h3 {
                 color: var(--whiteColor);
@@ -61,59 +106,61 @@
                     color: var(--whiteColor);
                 }
             }
+
             p {
                 color: #e9e9e9;
             }
-        }
-        &::before {
-            left: 0;
-        }
-        &::after {
-            right: 0;
-        }
-        .service-content {
+
             .line-bnt {
                 color: var(--whiteColor);
             }
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
         }
     }
 }
 
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
-
     .single-service {
         padding: 20px;
+        min-height: 280px; // Adjust for mobile
+
         .service-img img {
             width: 50px;
         }
     }
-
 }
 
 /* Min width 576px to Max width 767px */
-@media only screen and (min-width: 576px) and (max-width: 767px) {}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
     .single-service {
         padding: 20px;
+        min-height: 300px; // Adjust for tablet
     }
-
 }
 
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
     .single-service {
         padding: 20px;
     }
-
 }
 
 /* Min width 1200px to Max width 1399px */
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
 
 /* Min width 1600px */
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+}

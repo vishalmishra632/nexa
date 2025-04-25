@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TopHeaderComponent } from '../../common/top-header/top-header.component';
 import { NavbarComponent } from '../../common/navbar/navbar.component';
-import { BannerComponent } from './banner/banner.component';
+import { BannerComponent } from '../home-demo-two/banner/banner.component';
 import { ServicesComponent } from '../../common/services/services.component';
 import { CompanyComponent } from '../../common/company/company.component';
 /*import { WhyChooseUsComponent } from '../../common/why-choose-us/why-choose-us.component';*/

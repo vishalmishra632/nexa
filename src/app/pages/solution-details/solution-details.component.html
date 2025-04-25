@@ -1,13 +1,10 @@
-<app-top-header />
+<!--<app-top-header />
 
 <app-navbar />
 
-<app-page-banner
-    [pageTitle]="'Solution Details'"
-/>
-
+<app-page-banner [pageTitle]="'Solution Details'" />-->
 <!-- Solution Details -->
-<div class="services-details-area ptb-100">
+<!--<div class="services-details-area ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -39,6 +36,69 @@
                 <div class="col-lg-8">
                     <h3>QA Testing</h3>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition necessary, making this the first as necessary, making this</p>
+                </div>
+            </div>
+        </div>
+        <div class="scrives-item-3 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="social">
+                        <ul class="social-link">
+                            <li><a target="_blank" href="#"><i class="bx bxl-facebook"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-twitter"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-pinterest-alt"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="share">
+                        <a href="#" target="_blank"><i class="bx bx-share-alt"></i> Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<app-top-header />
+
+<app-navbar />
+
+<app-page-banner [pageTitle]="pageTitle" />
+
+<!-- Solution Details -->
+<div class="services-details-area ptb-100">
+    <div class="container">
+        <div class="row" *ngIf="serviceData">
+            <div class="col-lg-6">
+                <div class="services-img mb">
+                    <img [src]="serviceData.images?.[0] || 'images/solutions-details/1.png'" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="services-img mb">
+                    <img [src]="serviceData.images?.[1] || 'images/solutions-details/2.png'" alt="Image">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="services-details-text">
+                    <h2>{{serviceData.mainTitle}}</h2>
+                    <p *ngFor="let paragraph of serviceData.paragraphs">{{paragraph}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="scrives-item-2 mt-4" *ngIf="serviceData">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="services-img mb-qc">
+                        <img [src]="serviceData.qaImage || 'images/solutions-details/5.png'" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h3>{{serviceData.qaTitle}}</h3>
+                    <p>{{serviceData.qaContent}}</p>
                 </div>
             </div>
         </div>

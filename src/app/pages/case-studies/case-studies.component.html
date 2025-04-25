@@ -1,13 +1,12 @@
-<app-top-header />
+<!--<app-top-header />
 
 <app-navbar />
 
 <app-page-banner
     [pageTitle]="'Case Studies'"
-/>
-
+/>-->
 <!-- Case Studies -->
-<div class="home-case ptb-100">
+<!--<div class="home-case ptb-100">
     <div class="container">
         <div class="row case-list">
             <div class="col-lg-4 col-sm-6">
@@ -94,6 +93,93 @@
                         <li class="page-item"><a class="page-link" routerLink="."><i class='bx bx-chevrons-right'></i></a></li>
                     </ul>
                 </nav>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<app-top-header />
+
+<app-navbar />
+
+<app-page-banner [pageTitle]="'Projects'" />
+
+<!-- Case Studies -->
+<div class="home-case ptb-100">
+    <div class="container">
+        <div class="row case-list">
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><img src="images/case/c1.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><h3>Mainframe DB2 System Programming Excellence</h3></a>
+                        <p>Banking sector transformation with DB2 expertise. Delivered 40% performance improvement and enhanced disaster recovery capabilities.</p>
+                        <a [routerLink]="['/case-study', 'mainframe-db2-specialist']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><img src="images/case/c2.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><h3>Healthcare z/OS Systems Modernization</h3></a>
+                        <p>Complex z/OS upgrade with zero downtime. Achieved 99.9% system stability and 35% performance increase.</p>
+                        <a [routerLink]="['/case-study', 'mainframe-zos-engineer']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'mainframe-developer']"><img src="images/case/c3.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'mainframe-developer']"><h3>Banking Legacy System Modernization</h3></a>
+                        <p>COBOL application transformation enabling digital banking. 70% reduction in maintenance time.</p>
+                        <a [routerLink]="['/case-study', 'mainframe-developer']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'senior-java-developer']"><img src="images/case/c4.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'senior-java-developer']"><h3>Financial Services Digital Transformation</h3></a>
+                        <p>Microservices architecture implementation with Spring Boot. 60% latency reduction achieved.</p>
+                        <a [routerLink]="['/case-study', 'senior-java-developer']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'java-aws-developer']"><img src="images/case/c5.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'java-aws-developer']"><h3>Banking Cloud Migration Success</h3></a>
+                        <p>AWS serverless transformation. 25% cost reduction and 40% performance improvement.</p>
+                        <a [routerLink]="['/case-study', 'java-aws-developer']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 case-item">
+                <div class="single-case">
+                    <div class="case-img">
+                        <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><img src="images/case/c6.jpg" alt="case" /></a>
+                    </div>
+                    <div class="content">
+                        <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><h3>Complex Payroll System Transformation</h3></a>
+                        <p>SAP HCM implementation for multi-unit banking. $500K annual savings achieved.</p>
+                        <a [routerLink]="['/case-study', 'sap-hcm-consultant']" class="line-bnt">View Project Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

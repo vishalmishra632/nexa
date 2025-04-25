@@ -1,13 +1,12 @@
-<app-top-header />
+<!--<app-top-header />
 
 <app-navbar />
 
 <app-page-banner
     [pageTitle]="'Case Study Details'"
-/>
-
+/>-->
 <!-- Case Study Details -->
-<div class="services-details-area ptb-100">
+<!--<div class="services-details-area ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -56,5 +55,68 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>-->
+
+
+<app-top-header />
+
+<app-navbar />
+
+<app-page-banner [pageTitle]="pageTitle" />
+
+<!-- Case Study Details -->
+<div class="services-details-area ptb-100">
+    <div class="container">
+        <div class="row" *ngIf="caseStudyData">
+            <div class="col-12">
+                <div class="services-img mb">
+                    <img [src]="caseStudyData.image || 'images/case-details/1.jpg'" alt="Image">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="services-details-text">
+                    <h2>{{caseStudyData.mainTitle}}</h2>
+                    <div class="case-study-info mb-4">
+                        <p><strong>Industry:</strong> {{caseStudyData.industry}}</p>
+                        <p><strong>Tech Stack:</strong> {{caseStudyData.techStack.join(', ')}}</p>
+                        <p><strong>Project Overview:</strong> {{caseStudyData.requirement}}</p>
+                    </div>
+                    <p *ngFor="let paragraph of caseStudyData.paragraphs">{{paragraph}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="scrives-item-2 mt-4" *ngIf="caseStudyData">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="services-img mb-qc">
+                        <img [src]="caseStudyData.additionalImage || 'images/solutions-details/5.png'" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h3>{{caseStudyData.additionalTitle}}</h3>
+                    <p>{{caseStudyData.additionalContent}}</p>
+                </div>
+            </div>
+        </div>
+        <!--<div class="scrives-item-3 mt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="social">
+                        <ul class="social-link">
+                            <li><a target="_blank" href="#"><i class="bx bxl-facebook"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-twitter"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-pinterest-alt"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="bx bxl-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="share">
+                        <a href="#" target="_blank"><i class="bx bx-share-alt"></i> Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
     </div>
 </div>

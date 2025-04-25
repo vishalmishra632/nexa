@@ -1,4 +1,4 @@
-<div class="{{navbarClass}}">
+<!--<div class="{{navbarClass}}">
     <div
         class="main-nav"
         [ngClass]="{'sticky': isSticky}"
@@ -18,16 +18,16 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+                            <a  routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" >
                                 Home
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
+                            </a>-->
+                            <!--<ul class="dropdown-menu">-->
+                                <!--<li class="nav-item">
                                     <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Home Demo - 1
                                     </a>
-                                </li>
-                                <li class="nav-item">
+                                </li>-->
+                                <!--<li class="nav-item">
                                     <a routerLink="/index-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Home Demo - 2
                                     </a>
@@ -36,9 +36,9 @@
                                     <a routerLink="/index-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Home Demo - 3
                                     </a>
-                                </li>
-                            </ul>
-                        </li>
+                                </li>-->
+                            <!--</ul>-->
+                        <!--</li>
                         <li class="nav-item">
                             <a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                 About Us
@@ -96,15 +96,15 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
-                                Pages
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
+                            <a routerLink="/team" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Team
+                            </a>-->
+                            <!--<ul class="dropdown-menu">-->
+                                <!--<li class="nav-item">
                                     <a routerLink="/team" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Team
                                     </a>
-                                </li>
+                                </li>-->
                                 <!--<li class="nav-item">
                                     <a routerLink="/pricing" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Pricing
@@ -115,11 +115,11 @@
                                         Gallery
                                     </a>
                                 </li>-->
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a routerLink="/testimonials" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Testimonials
                                     </a>
-                                </li>
+                                </li>-->
                                 <!--<li class="nav-item">
                                     <a routerLink="/sign-up" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Sign Up
@@ -135,7 +135,7 @@
                                         404 Error Page
                                     </a>
                                 </li>-->
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         FAQ
                                     </a>
@@ -149,17 +149,17 @@
                                     <a routerLink="/privacy-policy" cl ass="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">
                                         Privacy Policy
                                     </a>
-                                </li>
-                            </ul>
-                        </li>
+                                </li>-->
+                            <!--</ul>-->
+                        <!--</li>
                         <li class="nav-item">
                             <a routerLink="/contact" class="nav-link">
                                 Contact Us
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="nav-right">
+                </div>-->
+                <!--<div class="nav-right">
                     <form>
                         <div class="input-group">
                             <input type="text" class="form-control search" placeholder="Search..." />
@@ -168,12 +168,119 @@
                             <i class="bx bx-search"></i>
                         </button>
                     </form>
-                </div>
-                <div class="nav-btn">
+                </div>-->
+                <!--<div class="nav-btn">
                     <a routerLink="/solutions" class="box-btn">
                         Get Started
                     </a>
+                </div>-->
+            <!--</nav>
+        </div>
+    </div>
+</div>-->
+
+
+<div class="{{navbarClass}}">
+    <div class="main-nav"
+         [ngClass]="{'sticky': isSticky}">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light" [class.active]="classApplied">
+                <a class="navbar-brand" routerLink="/">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-left">
+                        <li class="nav-item">
+                            <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/solutions" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Services
+                            </a>
+                            <!--<ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a routerLink="/solutions" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Solutions
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/solution-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Solution Details
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/case-studies" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Projects
+                            </a>
+                            <!--<ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a >
+                                        Case Studies
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/case-study-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Case Study Details
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Blog
+                            </a>
+                            <!--<ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/blog-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                        Blog Details
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/team" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Team
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/contact" class="nav-link">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- Contact info -->
+                <!--<div class="nav-contact-info d-none d-lg-flex">
+                    <div class="phone-email">
+                        <a href="tel:+1123456789"><i class="bx bxs-phone-call"></i> +1 123 456 789</a>
+                        <a href="mailto:accounts&#64;nexatechservices.com"><i class="bx bxs-envelope"></i></a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>-->
             </nav>
         </div>
     </div>
