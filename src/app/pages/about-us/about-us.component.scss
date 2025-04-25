@@ -1,1 +1,31 @@
 @use "../../common/about/about.component.scss";
+
+.company-content {
+    .company-tittle {
+        h3 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                margin-bottom: 12px;
+                padding-left: 25px;
+                position: relative;
+
+                &:before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: #007bff;
+                    font-size: 20px;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}

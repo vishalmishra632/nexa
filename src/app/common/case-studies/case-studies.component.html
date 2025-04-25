@@ -1,12 +1,10 @@
-<div
-    class="home-case ptb-100"
-    [ngClass]="{'pt-0': router.url === '/index-3'}"
->
+<div class="home-case ptb-100"
+     [ngClass]="{'pt-0': router.url === '/index-3'}">
     <div class="container">
         <div class="section-title">
             <span>Case Studies</span>
             <h2>Have a Look Our Work Showcase</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+            <p>Discover our portfolio of successful projects across diverse industries. From custom software development to comprehensive IT solutions, explore how we've transformed businesses through innovative technology implementations. Each case study showcases our expertise and commitment to client success.</p>
         </div>
         <div class="case">
             <ul class="nav-tabset">
@@ -17,92 +15,92 @@
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
                     <span (click)="switchTab($event, 'tab2')">
-                        Design
+                        Mainframe
                     </span>
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
                     <span (click)="switchTab($event, 'tab3')">
-                        Development
+                        Java Development
                     </span>
                 </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
                     <span (click)="switchTab($event, 'tab4')">
-                        Cyber Security
+                        SAP Solutions
                     </span>
                 </li>
             </ul>
             <div class="tabs-container">
                 <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
                     <div class="row case-list">
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c1.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><img src="images/case/c1.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Joe’s Company Software Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><h3>Mainframe DB2 System Programming Excellence</h3></a>
+                                    <p>Banking sector transformation with DB2 expertise. Delivered 40% performance improvement and enhanced disaster recovery capabilities.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c2.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><img src="images/case/c2.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><h3>Healthcare z/OS Systems Modernization</h3></a>
+                                    <p>Complex z/OS upgrade with zero downtime. Achieved 99.9% system stability and 35% performance increase.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c3.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']"><img src="images/case/c3.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Restaurant Management & Web Developing</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']"><h3>Banking Legacy System Modernization</h3></a>
+                                    <p>COBOL application transformation enabling digital banking. 70% reduction in maintenance time.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c4.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']"><img src="images/case/c4.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>IT Software Company Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']"><h3>Financial Services Digital Transformation</h3></a>
+                                    <p>Microservices architecture implementation with Spring Boot. 60% latency reduction achieved.</p>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c5.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']"><img src="images/case/c5.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Parking Management & Web Developing</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']"><h3>Banking Cloud Migration Success</h3></a>
+                                    <p>AWS serverless transformation. 25% cost reduction and 40% performance improvement.</p>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c6.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><img src="images/case/c6.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><h3>Complex Payroll System Transformation</h3></a>
+                                    <p>SAP HCM implementation for multi-unit banking. $500K annual savings achieved.</p>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
@@ -110,39 +108,39 @@
                 </div>
                 <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
                     <div class="row case-list">
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c4.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><img src="images/case/c1.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>IT Software Company Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']"><h3>Mainframe DB2 System Programming Excellence</h3></a>
+                                    <p>Banking sector transformation with DB2 expertise. Delivered 40% performance improvement and enhanced disaster recovery capabilities.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-db2-specialist']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c5.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><img src="images/case/c2.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Parking Management & Web Developing</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']"><h3>Healthcare z/OS Systems Modernization</h3></a>
+                                    <p>Complex z/OS upgrade with zero downtime. Achieved 99.9% system stability and 35% performance increase.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-zos-engineer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c6.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']"><img src="images/case/c3.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']"><h3>Banking Legacy System Modernization</h3></a>
+                                    <p>COBOL application transformation enabling digital banking. 70% reduction in maintenance time.</p>
+                                    <a [routerLink]="['/case-study', 'mainframe-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
@@ -150,39 +148,27 @@
                 </div>
                 <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
                     <div class="row case-list">
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c2.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']"><img src="images/case/c4.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']"><h3>Financial Services Digital Transformation</h3></a>
+                                    <p>Microservices architecture implementation with Spring Boot. 60% latency reduction achieved.</p>
+                                    <a [routerLink]="['/case-study', 'senior-java-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c3.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']"><img src="images/case/c5.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Restaurant Management & Web Developing</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c4.jpg" alt="case"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/case-study-details"><h3>IT Software Company Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']"><h3>Banking Cloud Migration Success</h3></a>
+                                    <p>AWS serverless transformation. 25% cost reduction and 40% performance improvement.</p>
+                                    <a [routerLink]="['/case-study', 'java-aws-developer']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
@@ -190,39 +176,15 @@
                 </div>
                 <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
                     <div class="row case-list">
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6 case-item">
                             <div class="single-case">
                                 <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c6.jpg" alt="case"/></a>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><img src="images/case/c6.jpg" alt="case" /></a>
                                 </div>
                                 <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c4.jpg" alt="case"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/case-study-details"><h3>IT Software Company Development Case</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/case-study-details"><img src="images/case/c5.jpg" alt="case"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/case-study-details"><h3>Parking Management & Web Developing</h3></a>
-                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                    <a routerLink="/case-study-details" class="line-bnt">View Project Details</a>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']"><h3>Complex Payroll System Transformation</h3></a>
+                                    <p>SAP HCM implementation for multi-unit banking. $500K annual savings achieved.</p>
+                                    <a [routerLink]="['/case-study', 'sap-hcm-consultant']" class="line-bnt">View Project Details</a>
                                 </div>
                             </div>
                         </div>
@@ -230,8 +192,8 @@
                 </div>
             </div>
         </div>
-        <div class="case-btn text-center">
+        <!--<div class="case-btn text-center">
             <p>We Have More Amazing Cases. <a routerLink="/">View More</a></p>
-        </div>
+        </div>-->
     </div>
 </div>

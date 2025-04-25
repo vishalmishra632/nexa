@@ -1,13 +1,12 @@
-<app-top-header />
+<!--<app-top-header />
 
 <app-navbar />
 
 <app-page-banner
     [pageTitle]="'Blog Details'"
-/>
-
+/>-->
 <!-- Blog Details -->
-<div class="blog-details-area ptb-100">
+<!--<div class="blog-details-area ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
@@ -145,7 +144,7 @@
                             <form class="comment-form">
                                 <p class="comment-notes">
                                     <span id="email-notes">Your email address will not be published.</span>
-                                    Required fields are marked 
+                                    Required fields are marked
                                     <span class="required">*</span>
                                 </p>
                                 <p class="comment-form-author">
@@ -272,7 +271,165 @@
                                 <a routerLink="/">Aiva</a>
                             </div>
                         </div>
-                    </div>       
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<app-top-header />
+
+<app-navbar />
+
+<app-page-banner [pageTitle]="pageTitle" />
+
+<!-- Blog Details -->
+<div class="blog-details-area ptb-100">
+    <div class="container">
+        <div class="row" *ngIf="blogData">
+            <div class="col-lg-8 col-md-12">
+                <div class="blog-details-desc">
+                    <div class="article-image">
+                        <img [src]="blogData.mainImage" alt="image">
+                    </div>
+                    <div class="article-content">
+                        <div class="entry-meta">
+                            <ul>
+                                <li><span>Posted On:</span> <a routerLink="/blog">{{blogData.date}}</a></li>
+                                <li><span>Posted By:</span> <a routerLink="/blog">{{blogData.author}}</a></li>
+                            </ul>
+                        </div>
+                        <h3>{{blogData.title}}</h3>
+                        <p>{{blogData.content.introduction}}</p>
+                        <p *ngFor="let paragraph of blogData.content.paragraphs">{{paragraph}}</p>
+
+                        <blockquote class="flaticon-quote" *ngIf="blogData.content.blockquote">
+                            <p>{{blogData.content.blockquote}}</p>
+                        </blockquote>
+
+                        <div class="row justify-content-center mb-3" *ngIf="blogData.articleImages">
+                            <div class="col-lg-4 col-sm-6 mt-4" *ngFor="let image of blogData.articleImages">
+                                <div class="b-d-s-img">
+                                    <img [src]="image" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngFor="let section of blogData.content.additionalSections">
+                            <h3>{{section.title}}</h3>
+                            <p>{{section.content}}</p>
+                            <img *ngIf="section.image" [src]="section.image" alt="Additional Image" class="mb-4">
+                        </div>
+                    </div>
+                    <!--<div class="article-footer">
+                        <div class="article-tags">
+                            <span><i class='bx bx-share-alt'></i></span>
+                            <a routerLink="." target="_blank">Share</a>
+                        </div>
+                        <div class="article-share">
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                                <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <div class="post-navigation">
+                        <div class="navigation-links">
+                            <div class="nav-previous">
+                                <a routerLink="/blog"><i class='bx bx-left-arrow-alt'></i> Prev Post</a>
+                            </div>
+                            <div class="nav-next">
+                                <a routerLink="/blog">Next Post <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <aside class="widget-area" id="secondary">
+                    <!--<div class="widget widget_search">
+                        <h3 class="widget-title">Search Now</h3>
+                        <div class="post-wrap">
+                            <form class="search-form">
+                                <label>
+                                    <span class="screen-reader-text">Search for:</span>
+                                    <input type="search" class="search-field" placeholder="Search...">
+                                </label>
+                                <button type="submit"><i class='bx bx-search'></i></button>
+                            </form>
+                        </div>
+                    </div>-->
+                    <!--<div class="widget widget-peru-posts-thumb" *ngIf="blogData.popularPosts">
+                        <h3 class="widget-title">Popular Posts</h3>
+                        <div class="post-wrap">
+                            <article class="item" *ngFor="let post of blogData.popularPosts">
+                                <a [routerLink]="['/blog-details', post.slug]" class="thumb">
+                                    <span class="fullimage cover" [style.background-image]="'url(' + post.image + ')'" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <time [attr.datetime]="post.date">{{post.date}}</time>
+                                    <h4 class="title usmall">
+                                        <a [routerLink]="['/blog-details', post.slug]">{{post.title}}</a>
+                                    </h4>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+                        </div>
+                    </div>-->
+                    <!--<div class="widget widget_categories">
+                        <h3 class="widget-title">Archives</h3>
+                        <div class="post-wrap">
+                            <ul>
+                                <li><a routerLink="/blog">January <span>2024</span></a></li>
+                                <li><a routerLink="/blog">February <span>2024</span></a></li>
+                                <li><a routerLink="/blog">March <span>2024</span></a></li>
+                                <li><a routerLink="/blog">April <span>2024</span></a></li>
+                                <li><a routerLink="/blog">May <span>2024</span></a></li>
+                                <li><a routerLink="/blog">June <span>2024</span></a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!--<div class="widget widget_categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <div class="post-wrap">
+                            <ul>
+                                <li><a routerLink="/blog">Business <span>(10)</span></a></li>
+                                <li><a routerLink="/blog">Privacy <span>(20)</span></a></li>
+                                <li><a routerLink="/blog">Technology <span>(10)</span></a></li>
+                                <li><a routerLink="/blog">Tips <span>(12)</span></a></li>
+                                <li><a routerLink="/blog">Uncategorized <span>(16)</span></a></li>
+                                <li><a routerLink="/blog">Aiva <span>(17)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!--<div class="widget widget_meta">
+                        <h3 class="widget-title">Meta</h3>
+                        <div class="post-wrap">
+                            <ul>
+                                <li><a routerLink="/sign-in">Log in</a></li>
+                                <li><a routerLink="/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                                <li><a routerLink="/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                                <li><a routerLink="/">WordPress.org</a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!--<div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">Tags</h3>
+                        <div class="post-wrap">
+                            <div class="tagcloud">
+                                <a routerLink="/">Business (3)</a>
+                                <a routerLink="/">Privacy (3)</a>
+                                <a routerLink="/">Technology (2)</a>
+                                <a routerLink="/">Tips (2)</a>
+                                <a routerLink="/">Uncategorized (1)</a>
+                                <a routerLink="/">Aiva</a>
+                            </div>
+                        </div>
+                    </div>-->
                 </aside>
             </div>
         </div>
